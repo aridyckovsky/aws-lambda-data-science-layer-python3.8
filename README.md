@@ -20,6 +20,17 @@ shell scripts.
 
 ## Usage
 
+You can run an entire process in one line:
+
+```
+make bucket build zip deploy
+```
+
+Or, you can go step by step:
+
+0. Create a bucket with `make bucket`. This will also save the bucket name to
+   a TXT file. This bucket name should not change unless the project requires
+   the layer to go to a new bucket.
 
 1. Build with `make build`. This will install the packages listed in
    `requirements.txt` and their dependencies into the `python` directory.
@@ -29,3 +40,4 @@ shell scripts.
    folder into a single zip file `data-science-layer.zip`.
 
 3. Deploy with `make deploy`. TODO.
+
